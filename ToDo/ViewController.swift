@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonWidth: NSLayoutConstraint!
     @IBOutlet weak var buttonPosition: NSLayoutConstraint!
     @IBOutlet weak var buttonPosition2: NSLayoutConstraint!
+    @IBOutlet weak var toDoList: UIButton!
     var originalColor : UIColor?
     var originalPosition : CGPoint?
     
@@ -24,7 +25,14 @@ class ViewController: UIViewController {
         print("The Button Has Been Pressed")
         self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
     }
-//MARK: Changing Button Color
+    
+//MARK: Open View Controller -> Third View Controller
+    
+    @IBAction func ToDoButtonPressed(_ sender: Any) {
+        print("The To Do List Button Pressed")
+        self.performSegue(withIdentifier: "ThirdViewSegue", sender: self)
+    }
+    //MARK: Changing Button Color
     @IBAction func buttonTwoPressed(_ sender: UIButton) {
         openViewController.backgroundColor = openViewController.backgroundColor == originalColor ? .red : originalColor
     }
@@ -56,6 +64,7 @@ class ViewController: UIViewController {
             })
         }
      }
+    
  }
 
 //MARK: Code that works
