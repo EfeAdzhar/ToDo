@@ -2,6 +2,7 @@
 //  ToDo
 //  Created by Efe on 25.09.2021.
 import UIKit
+//MARK: Code that works
 class ViewController: UIViewController {
 //MARK: Saving origins
     override func viewDidLoad() {
@@ -32,7 +33,8 @@ class ViewController: UIViewController {
         print("The To Do List Button Pressed")
         self.performSegue(withIdentifier: "ThirdViewSegue", sender: self)
     }
-    //MARK: Changing Button Color
+    
+//MARK: Changing Button Color
     @IBAction func buttonTwoPressed(_ sender: UIButton) {
         openViewController.backgroundColor = openViewController.backgroundColor == originalColor ? .red : originalColor
     }
@@ -64,10 +66,8 @@ class ViewController: UIViewController {
             })
         }
      }
-    
- }
+}
 
-//MARK: Code that works
 //MARK: My tested code
 //        if buttonWidth.constant == 244 {
 //            UIView.animate(withDuration: 0.35, animations: { () -> Void in self.buttonWidth.constant = 300

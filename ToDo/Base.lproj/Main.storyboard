@@ -68,8 +68,8 @@
                                     <action selector="buttonTwoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jba-w8-3QU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYG-LB-vfs">
-                                <rect key="frame" x="85" y="265" width="250" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYG-LB-vfs">
+                                <rect key="frame" x="85" y="314" width="250" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.39238812379999999" blue="0.37635400959999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="ToDoList"/>
                                 <connections>
@@ -96,6 +96,8 @@
                             <constraint firstItem="FzW-1Y-iYx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="383" id="ePg-vT-StQ"/>
                             <constraint firstItem="4tm-c3-3ba" firstAttribute="trailing" secondItem="SLc-CC-lhD" secondAttribute="trailing" id="iLI-bm-BF1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SLc-CC-lhD" secondAttribute="trailing" constant="85" id="nbl-lT-I0B"/>
+                            <constraint firstItem="FzW-1Y-iYx" firstAttribute="top" secondItem="WYG-LB-vfs" secondAttribute="bottom" constant="19" id="oLu-Vu-56O"/>
+                            <constraint firstItem="WYG-LB-vfs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="314" id="qSQ-aS-7td"/>
                             <constraint firstItem="006-ea-K0Z" firstAttribute="leading" secondItem="4tm-c3-3ba" secondAttribute="leading" id="vfh-1U-Fvj"/>
                             <constraint firstItem="4tm-c3-3ba" firstAttribute="leading" secondItem="SLc-CC-lhD" secondAttribute="leading" id="zgx-Wg-hNo"/>
                         </constraints>
@@ -121,13 +123,6 @@
                     <view key="view" contentMode="scaleToFill" id="Se0-Cc-NUi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iKS-YR-E44">
-                                <rect key="frame" x="103" y="203" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="P3C-uO-0sc"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
@@ -158,6 +153,14 @@
                                     <action selector="backButtonPressed:" destination="hMy-cR-wev" eventType="touchUpInside" id="fg8-Zg-Cy7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWP-kE-kCb">
+                                <rect key="frame" x="75" y="229" width="264" height="62"/>
+                                <color key="backgroundColor" red="1" green="0.93840872689999999" blue="0.97810374600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="This is Error :)"/>
+                                <connections>
+                                    <action selector="errorButtonPressed:" destination="hMy-cR-wev" eventType="touchUpInside" id="LVH-OK-NKp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Trg-UZ-776"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -165,6 +168,10 @@
                         <constraints>
                             <constraint firstItem="rMO-fe-CB3" firstAttribute="top" secondItem="Trg-UZ-776" secondAttribute="top" constant="385" id="E4n-2h-VOD"/>
                             <constraint firstItem="rMO-fe-CB3" firstAttribute="centerX" secondItem="Trg-UZ-776" secondAttribute="centerX" id="Hkp-y5-D7c"/>
+                            <constraint firstItem="Trg-UZ-776" firstAttribute="bottom" secondItem="tWP-kE-kCb" secondAttribute="bottom" constant="517" id="Nfv-Vw-Goj"/>
+                            <constraint firstItem="tWP-kE-kCb" firstAttribute="trailing" secondItem="rMO-fe-CB3" secondAttribute="trailing" id="Ss6-bb-XqJ"/>
+                            <constraint firstItem="tWP-kE-kCb" firstAttribute="top" secondItem="Trg-UZ-776" secondAttribute="top" constant="229" id="csN-5c-LoC"/>
+                            <constraint firstItem="tWP-kE-kCb" firstAttribute="leading" secondItem="rMO-fe-CB3" secondAttribute="leading" id="fvB-ML-dhf"/>
                             <constraint firstItem="rMO-fe-CB3" firstAttribute="leading" secondItem="Trg-UZ-776" secondAttribute="leading" constant="75" id="kr1-e5-Xs6"/>
                             <constraint firstItem="rMO-fe-CB3" firstAttribute="centerY" secondItem="NBW-LO-2bx" secondAttribute="centerY" id="vaL-cf-KnK"/>
                         </constraints>
@@ -172,12 +179,13 @@
                     <navigationItem key="navigationItem" id="VQy-Zy-cl5"/>
                     <connections>
                         <outlet property="closeButton" destination="rMO-fe-CB3" id="iD3-Pf-OIn"/>
+                        <outlet property="errorButton" destination="tWP-kE-kCb" id="D4h-SZ-zOy"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="ViewSegue" id="rsp-G3-Szm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZoS-V3-QW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="94"/>
+            <point key="canvasLocation" x="815.94202898550736" y="93.75"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemRedColor"/>
@@ -187,9 +195,6 @@
         </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
