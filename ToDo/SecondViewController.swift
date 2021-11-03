@@ -1,7 +1,6 @@
 //  ViewControllerTwo.swift
 //  ToDo
 //  Created by Efe on 28.09.2021.
-
 import UIKit
 
 class SecondViewController: UIViewController {
@@ -45,7 +44,11 @@ class SecondViewController: UIViewController {
     }
 //MARK: Error Button Pressed
     @IBAction func errorButtonPressed(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "Error", message: "Suprice, it's an error :)", preferredStyle: .alert)
+        errorButtonOne(title: "Suprice, it's an error :)", message: "What's your problem?", style: .alert)
+}
+//MARK: Error Functions
+    func errorButtonOne(title : String, message : String, style : UIAlertController.Style) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let action1 = UIAlertAction(title: "my bad", style: .default)
 //If person presses "not ok", he will go back to mainViewController
         let action2 = UIAlertAction(title: "not ok", style: .cancel) { action2 in

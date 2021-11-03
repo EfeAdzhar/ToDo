@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     
     @IBAction func ToDoButtonPressed(_ sender: Any) {
         print("The To Do List Button Pressed")
-        self.performSegue(withIdentifier: "ThirdViewSegue", sender: self)
+        self.performSegue(withIdentifier: "toDoListSegue", sender: self)
     }
     
 //MARK: Changing Button Color
