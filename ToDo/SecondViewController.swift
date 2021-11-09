@@ -5,16 +5,34 @@ import UIKit
 
 class SecondViewController: UIViewController {
 //MARK: METHOD
+    @IBOutlet weak var mySwitch: UISwitch!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var errorButton: UIButton!
+    var backgroundColor : UIColor!
+    var interestingButton = UIButton()
 //MARK: UIViewController Lifecycle
     override class func awakeFromNib() {
         print("awakeFromNib")
     }
+//MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
+        //Switch Colors
+        self.mySwitch.tintColor = UIColor.green
+        self.mySwitch.thumbTintColor = UIColor.red
+        //Targeting
+        self.mySwitch.addTarget(self, action: #selector(mySwitchAction(_:)), for: .valueChanged)
+        //Saving errorButtons backgorund Color
+        backgroundColor = errorButton.backgroundColor
+        //Creating interesting button
+        self.interestingButton.frame = CGRect(x: 150, y: 600, width: 200, height: 70)
+        self.interestingButton.backgroundColor = UIColor.red
+        self.interestingButton.setTitle("Button is Not Pressed", for: .normal)
+        self.interestingButton.setTitle("Button is Pressed :D", for: .highlighted)
+        self.view.addSubview(self.interestingButton)
     }
+//MARK: UIViewController Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         print("viewWillAppear")
     }
@@ -52,11 +70,20 @@ class SecondViewController: UIViewController {
         let action1 = UIAlertAction(title: "my bad", style: .default)
 //If person presses "not ok", he will go back to mainViewController
         let action2 = UIAlertAction(title: "not ok", style: .cancel) { action2 in
-            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true)
         }
 //Adding some stuff
         alertController.addAction(action1)
         alertController.addAction(action2)
         self.present(alertController, animated: true, completion: nil)
+    }
+//MARK: Deleting or Returning Error Button BackGround Color
+    @IBAction func mySwitchAction(_ sender: UISwitch) {
+        if !sender.isOn {
+            errorButton.backgroundColor = nil
+        } else {
+            errorButton.backgroundColor = backgroundColor
+            
+        }
     }
 }
