@@ -74,7 +74,7 @@
                                 <state key="normal" title="ToDoList"/>
                                 <connections>
                                     <action selector="ToDoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVI-zf-JHT"/>
-                                    <segue destination="vcT-Rz-Vbp" kind="show" identifier="toDoListSegue" id="qwX-Kt-nKh"/>
+                                    <segue destination="vcT-Rz-Vbp" kind="presentation" identifier="toDoListSegue" modalPresentationStyle="overCurrentContext" id="qwX-Kt-nKh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,9 +124,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ok5-v1-8Y5">
-                                <rect key="frame" x="285" y="30" width="94" height="32"/>
-                            </stepper>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GZD-ol-0kc">
                                 <rect key="frame" x="0.0" y="100" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -140,24 +137,26 @@
                                     <action selector="backButtonPressed:" destination="vcT-Rz-Vbp" eventType="touchUpInside" id="vrN-DI-9iJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-bz-4mh">
+                                <rect key="frame" x="343" y="27" width="57" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P3C-uO-0sc"/>
                         <color key="backgroundColor" red="0.25645654851740052" green="0.1028639193351298" blue="0.058262337077767089" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Hbp-n9-5eu" firstAttribute="top" secondItem="ok5-v1-8Y5" secondAttribute="top" id="2tV-2k-Rmi"/>
                             <constraint firstItem="P3C-uO-0sc" firstAttribute="bottom" secondItem="GZD-ol-0kc" secondAttribute="bottom" constant="35" id="8N0-1q-7kO"/>
                             <constraint firstItem="GZD-ol-0kc" firstAttribute="leading" secondItem="P3C-uO-0sc" secondAttribute="leading" id="B3F-jE-eJB"/>
                             <constraint firstItem="Hbp-n9-5eu" firstAttribute="leading" secondItem="P3C-uO-0sc" secondAttribute="leading" constant="14" id="XBI-0d-GaV"/>
                             <constraint firstItem="GZD-ol-0kc" firstAttribute="top" secondItem="Hbp-n9-5eu" secondAttribute="bottom" constant="40" id="cmZ-hp-fFA"/>
-                            <constraint firstItem="ok5-v1-8Y5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hbp-n9-5eu" secondAttribute="trailing" constant="8" symbolic="YES" id="dFp-jx-L8u"/>
                             <constraint firstItem="Hbp-n9-5eu" firstAttribute="top" secondItem="P3C-uO-0sc" secondAttribute="top" constant="30" id="hEB-tC-Qr8"/>
-                            <constraint firstItem="P3C-uO-0sc" firstAttribute="trailing" secondItem="ok5-v1-8Y5" secondAttribute="trailing" constant="35" id="o2R-w5-nR2"/>
                             <constraint firstItem="GZD-ol-0kc" firstAttribute="centerX" secondItem="Se0-Cc-NUi" secondAttribute="centerX" id="y9s-Ex-SpY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="Hbp-n9-5eu" id="s3p-dW-vez"/>
-                        <outlet property="stepper" destination="ok5-v1-8Y5" id="S9w-Bs-H7g"/>
                         <outlet property="tableView" destination="GZD-ol-0kc" id="pwc-AK-eGp"/>
                     </connections>
                 </viewController>

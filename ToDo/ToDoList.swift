@@ -6,7 +6,6 @@ import UIKit
 class ToDoList: UIViewController {
 //MARK: Initialization
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
