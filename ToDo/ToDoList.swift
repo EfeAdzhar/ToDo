@@ -7,6 +7,7 @@ class ToDoList: UIViewController {
 //MARK: Initialization
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,5 +27,19 @@ class ToDoList: UIViewController {
         let alertButton = UIAlertAction(title: "OK", style: .default, handler: .none)
         alert.addAction(alertButton)
         self.present(alert, animated: true, completion: .none)
+    }
+//MARK: Adding Button Pressed Alert
+    func addingButtonPressed(title: String, message: String, style: UIAlertController.Style) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertButton1 = UIAlertAction(title: "Cancel", style: .cancel, handler: .none)
+        alert.addTextField(configurationHandler: { textField in textField.placeholder = "New Task"})
+        alert.addAction(alertButton1)
+        self.present(alert, animated: true, completion: .none)
+    }
+    
+//MARK: Adding Button Pressed
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        addingButtonPressed(title: "Add new Task", message: "Write down a new Task", style: .alert)
     }
 }

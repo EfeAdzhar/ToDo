@@ -138,9 +138,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-bz-4mh">
-                                <rect key="frame" x="337" y="49" width="57" height="35"/>
+                                <rect key="frame" x="359" y="24" width="35" height="40"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="vcT-Rz-Vbp" eventType="touchUpInside" id="1Wr-ct-A4T"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P3C-uO-0sc"/>
@@ -148,16 +151,18 @@
                         <constraints>
                             <constraint firstItem="P3C-uO-0sc" firstAttribute="bottom" secondItem="GZD-ol-0kc" secondAttribute="bottom" constant="35" id="8N0-1q-7kO"/>
                             <constraint firstItem="GZD-ol-0kc" firstAttribute="leading" secondItem="P3C-uO-0sc" secondAttribute="leading" id="B3F-jE-eJB"/>
+                            <constraint firstItem="XpL-bz-4mh" firstAttribute="top" secondItem="P3C-uO-0sc" secondAttribute="top" constant="24" id="DDE-jP-Hll"/>
                             <constraint firstItem="Hbp-n9-5eu" firstAttribute="leading" secondItem="P3C-uO-0sc" secondAttribute="leading" constant="14" id="XBI-0d-GaV"/>
-                            <constraint firstItem="XpL-bz-4mh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hbp-n9-5eu" secondAttribute="trailing" constant="8" symbolic="YES" id="XPN-39-TY3"/>
-                            <constraint firstItem="XpL-bz-4mh" firstAttribute="trailing" secondItem="Se0-Cc-NUi" secondAttribute="trailingMargin" id="Ybi-35-J5D"/>
                             <constraint firstItem="GZD-ol-0kc" firstAttribute="top" secondItem="Hbp-n9-5eu" secondAttribute="bottom" constant="40" id="cmZ-hp-fFA"/>
                             <constraint firstItem="Hbp-n9-5eu" firstAttribute="top" secondItem="P3C-uO-0sc" secondAttribute="top" constant="30" id="hEB-tC-Qr8"/>
+                            <constraint firstItem="XpL-bz-4mh" firstAttribute="centerY" secondItem="Hbp-n9-5eu" secondAttribute="centerY" constant="-1" id="imd-3F-evx"/>
+                            <constraint firstItem="XpL-bz-4mh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Se0-Cc-NUi" secondAttribute="trailingMargin" id="tKM-3N-q1c"/>
                             <constraint firstItem="GZD-ol-0kc" firstAttribute="centerX" secondItem="Se0-Cc-NUi" secondAttribute="centerX" id="y9s-Ex-SpY"/>
-                            <constraint firstItem="XpL-bz-4mh" firstAttribute="top" secondItem="P3C-uO-0sc" secondAttribute="top" constant="49" id="znv-WY-yWL"/>
+                            <constraint firstItem="XpL-bz-4mh" firstAttribute="leading" secondItem="Hbp-n9-5eu" secondAttribute="trailing" constant="287" id="ziB-Ub-Y7W"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="XpL-bz-4mh" id="Jcf-kl-oql"/>
                         <outlet property="backButton" destination="Hbp-n9-5eu" id="s3p-dW-vez"/>
                         <outlet property="tableView" destination="GZD-ol-0kc" id="pwc-AK-eGp"/>
                     </connections>
@@ -174,8 +179,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMO-fe-CB3">
-                                <rect key="frame" x="133" y="429" width="182" height="82"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMO-fe-CB3">
+                                <rect key="frame" x="146" y="429" width="156" height="82"/>
                                 <color key="backgroundColor" red="1" green="0.542998222170609" blue="0.68834042849344024" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Close View Controller"/>
                                 <userDefinedRuntimeAttributes>
@@ -188,7 +193,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWP-kE-kCb">
-                                <rect key="frame" x="167" y="273" width="126" height="62"/>
+                                <rect key="frame" x="197" y="273" width="96" height="62"/>
                                 <color key="backgroundColor" red="1" green="0.93840872689999999" blue="0.97810374600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="This is Error :)"/>
                                 <connections>
@@ -210,7 +215,7 @@
                         <constraints>
                             <constraint firstItem="Trg-UZ-776" firstAttribute="trailing" secondItem="tWP-kE-kCb" secondAttribute="trailing" constant="121" id="BDs-mp-VhR"/>
                             <constraint firstItem="rMO-fe-CB3" firstAttribute="top" secondItem="Trg-UZ-776" secondAttribute="top" constant="385" id="E4n-2h-VOD"/>
-                            <constraint firstItem="tWP-kE-kCb" firstAttribute="leading" secondItem="rMO-fe-CB3" secondAttribute="leading" constant="17" id="ESi-Db-ybu"/>
+                            <constraint firstItem="tWP-kE-kCb" firstAttribute="leading" secondItem="rMO-fe-CB3" secondAttribute="leading" constant="51" id="ESi-Db-ybu"/>
                             <constraint firstItem="rMO-fe-CB3" firstAttribute="centerX" secondItem="Trg-UZ-776" secondAttribute="centerX" constant="17" id="Hkp-y5-D7c"/>
                             <constraint firstItem="tWP-kE-kCb" firstAttribute="top" secondItem="Trg-UZ-776" secondAttribute="top" constant="229" id="NeA-qA-xMO"/>
                             <constraint firstItem="rMO-fe-CB3" firstAttribute="top" secondItem="tWP-kE-kCb" secondAttribute="bottom" constant="94" id="TGf-qx-a1Z"/>
