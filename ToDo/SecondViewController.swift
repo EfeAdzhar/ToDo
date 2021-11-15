@@ -10,6 +10,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var errorButton: UIButton!
     var backgroundColor : UIColor!
     var interestingButton = UIButton()
+    var picker = UIPickerView()
 //MARK: UIViewController Lifecycle
     override class func awakeFromNib() {
         print("awakeFromNib")
@@ -18,19 +19,29 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
+        
         //Switch Colors
         self.mySwitch.tintColor = UIColor.green
         self.mySwitch.thumbTintColor = UIColor.red
+        
         //Targeting
         self.mySwitch.addTarget(self, action: #selector(mySwitchAction(_:)), for: .valueChanged)
+        
         //Saving errorButtons backgorund Color
         backgroundColor = errorButton.backgroundColor
+        
         //Creating interesting button
         self.interestingButton.frame = CGRect(x: 150, y: 600, width: 200, height: 70)
         self.interestingButton.backgroundColor = UIColor.red
         self.interestingButton.setTitle("Button is Not Pressed", for: .normal)
         self.interestingButton.setTitle("Button is Pressed :D", for: .highlighted)
         self.view.addSubview(self.interestingButton)
+        
+        //Creating Picker
+        self.picker.frame = CGRect(x: 150, y: 700, width: 200, height: 200)
+        self.view.addSubview(picker)
+        picker.dataSource = self
+        picker.delegate = self
     }
 //MARK: UIViewController Lifecycle
     override func viewWillAppear(_ animated: Bool) {
@@ -83,7 +94,23 @@ class SecondViewController: UIViewController {
             errorButton.backgroundColor = nil
         } else {
             errorButton.backgroundColor = backgroundColor
-            
         }
+    }
+}
+
+extension SecondViewController : UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 5
+    }
+}
+
+extension SecondViewController : UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let result = "row:\(row+1)"
+        return result
     }
 }
