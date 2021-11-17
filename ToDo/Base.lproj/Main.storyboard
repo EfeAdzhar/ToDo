@@ -268,8 +268,8 @@
                                     <action selector="backButtonPressed:" destination="Lkc-r3-jIN" eventType="touchUpInside" id="3Sx-UF-XW2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmZ-0D-PJh">
-                                <rect key="frame" x="84" y="552" width="90" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmZ-0D-PJh">
+                                <rect key="frame" x="84" y="552" width="89" height="48"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="sVb-Gj-pBH"/>
@@ -278,8 +278,8 @@
                                     <color key="titleColor" red="1" green="0.28383586512009606" blue="0.88970173471419822" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDW-BA-eRR">
-                                <rect key="frame" x="256" y="552" width="99" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDW-BA-eRR">
+                                <rect key="frame" x="255" y="552" width="100" height="48"/>
                                 <color key="backgroundColor" systemColor="placeholderTextColor"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" red="0.66295147183943537" green="0.6736871612309554" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -290,15 +290,16 @@
                         <color key="backgroundColor" red="0.64721262936640267" green="0.41590008585813742" blue="0.15420073240356963" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="A8l-NF-DEO" firstAttribute="top" secondItem="5ew-Fh-ODB" secondAttribute="topMargin" constant="-15" id="0WG-bn-Db3"/>
-                            <constraint firstItem="FDW-BA-eRR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xmZ-0D-PJh" secondAttribute="trailing" constant="8" symbolic="YES" id="4lQ-jO-zZr"/>
-                            <constraint firstItem="xmZ-0D-PJh" firstAttribute="baseline" secondItem="FDW-BA-eRR" secondAttribute="baseline" id="4x8-CW-9gs"/>
-                            <constraint firstItem="xmZ-0D-PJh" firstAttribute="top" secondItem="frh-ea-Tb7" secondAttribute="top" constant="510" id="HIH-om-3LA"/>
+                            <constraint firstItem="FDW-BA-eRR" firstAttribute="top" secondItem="frh-ea-Tb7" secondAttribute="top" constant="508" id="2Tb-3d-hza"/>
+                            <constraint firstItem="FDW-BA-eRR" firstAttribute="top" secondItem="xmZ-0D-PJh" secondAttribute="top" id="ImF-TD-vgg"/>
+                            <constraint firstItem="FDW-BA-eRR" firstAttribute="firstBaseline" secondItem="xmZ-0D-PJh" secondAttribute="baseline" id="Mo8-0N-bHS"/>
+                            <constraint firstItem="frh-ea-Tb7" firstAttribute="trailing" secondItem="FDW-BA-eRR" secondAttribute="trailing" constant="59" id="U9q-di-Wv1"/>
                             <constraint firstItem="xmZ-0D-PJh" firstAttribute="leading" secondItem="frh-ea-Tb7" secondAttribute="leading" constant="84" id="ZTD-4H-lAf"/>
                             <constraint firstItem="frh-ea-Tb7" firstAttribute="trailing" secondItem="A8l-NF-DEO" secondAttribute="trailing" constant="330" id="dCF-Rs-YsB"/>
                             <constraint firstItem="frh-ea-Tb7" firstAttribute="bottom" secondItem="A8l-NF-DEO" secondAttribute="bottom" constant="788" id="dp8-ws-tha"/>
                             <constraint firstItem="A8l-NF-DEO" firstAttribute="leading" secondItem="5ew-Fh-ODB" secondAttribute="leadingMargin" id="fNu-sU-hxo"/>
                             <constraint firstItem="frh-ea-Tb7" firstAttribute="bottom" secondItem="xmZ-0D-PJh" secondAttribute="bottom" constant="262" id="gJV-dr-m5b"/>
-                            <constraint firstItem="frh-ea-Tb7" firstAttribute="trailing" secondItem="FDW-BA-eRR" secondAttribute="trailing" constant="76" id="taK-At-unM"/>
+                            <constraint firstItem="FDW-BA-eRR" firstAttribute="leading" secondItem="xmZ-0D-PJh" secondAttribute="trailing" constant="82" id="zm5-cD-pX6"/>
                         </constraints>
                     </view>
                 </viewController>
