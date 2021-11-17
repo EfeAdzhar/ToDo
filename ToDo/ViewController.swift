@@ -11,12 +11,15 @@ class ViewController: UIViewController {
         originalPosition = openViewController.frame.origin
         print("ViewController")
     }
+    
 //MARK: Initialization
     @IBOutlet weak var openViewController: UIButton!
     @IBOutlet weak var buttonHeight: NSLayoutConstraint!
     @IBOutlet weak var buttonWidth: NSLayoutConstraint!
     @IBOutlet weak var buttonPosition: NSLayoutConstraint!
     @IBOutlet weak var buttonPosition2: NSLayoutConstraint!
+    @IBOutlet weak var playerButton: UIButton!
+    //MARK: Variables
     @IBOutlet weak var toDoList: UIButton!
     var originalColor : UIColor?
     var originalPosition : CGPoint?
@@ -51,6 +54,7 @@ class ViewController: UIViewController {
             })
         }
     }
+    
 //MARK: Changing Button Position On Screen
     @IBAction func buttonFourPressed(_ sender: UIButton) {
         if buttonPosition.constant == 383 && buttonPosition2.constant == 22.5 {
@@ -65,6 +69,11 @@ class ViewController: UIViewController {
             })
         }
      }
+    
+//MARK: Player Button Pressed
+    @IBAction func playerButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "PlayerSegue", sender: self)
+    }
 }
 
 //MARK: My tested code

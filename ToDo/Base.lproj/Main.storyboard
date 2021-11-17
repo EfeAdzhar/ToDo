@@ -69,7 +69,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYG-LB-vfs">
-                                <rect key="frame" x="85" y="314" width="250" height="50"/>
+                                <rect key="frame" x="85" y="202" width="250" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.39238812379999999" blue="0.37635400959999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="ToDoList"/>
                                 <connections>
@@ -77,17 +77,31 @@
                                     <segue destination="vcT-Rz-Vbp" kind="presentation" identifier="toDoListSegue" modalPresentationStyle="overCurrentContext" id="qwX-Kt-nKh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hp-2q-4jD">
+                                <rect key="frame" x="85" y="289" width="250" height="53"/>
+                                <color key="backgroundColor" red="1" green="0.91688011660000002" blue="0.20382438419999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Player">
+                                    <color key="titleColor" red="1" green="0.0020686525409999998" blue="0.94381925870000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.07195443873" green="0.1831975609" blue="0.085693761539999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uXG-Is-eSX"/>
+                                    <segue destination="Lkc-r3-jIN" kind="presentation" identifier="PlayerSegue" modalPresentationStyle="overCurrentContext" id="Ofx-id-5xs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
                         <color key="tintColor" systemColor="systemGreenColor"/>
                         <constraints>
+                            <constraint firstItem="7Hp-2q-4jD" firstAttribute="top" secondItem="WYG-LB-vfs" secondAttribute="bottom" constant="37" id="07J-hc-VWf"/>
                             <constraint firstItem="SLc-CC-lhD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="3LA-NI-y8F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4tm-c3-3ba" secondAttribute="bottom" constant="179" id="8NW-aQ-vUu"/>
                             <constraint firstItem="4tm-c3-3ba" firstAttribute="top" secondItem="SLc-CC-lhD" secondAttribute="bottom" constant="20" id="FyS-tF-gzV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WYG-LB-vfs" secondAttribute="trailing" constant="79" id="Mmg-bY-YEK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="006-ea-K0Z" secondAttribute="bottom" constant="91" id="NEJ-W7-7nI"/>
                             <constraint firstItem="006-ea-K0Z" firstAttribute="trailing" secondItem="4tm-c3-3ba" secondAttribute="trailing" id="PUJ-mP-3wv"/>
+                            <constraint firstItem="7Hp-2q-4jD" firstAttribute="leading" secondItem="WYG-LB-vfs" secondAttribute="leading" id="TkO-NM-oKO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FzW-1Y-iYx" secondAttribute="trailing" symbolic="YES" id="Vo4-m9-mJg"/>
                             <constraint firstItem="WYG-LB-vfs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="VpI-S4-1cn"/>
                             <constraint firstItem="FzW-1Y-iYx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="W4q-E2-pXg"/>
@@ -96,9 +110,11 @@
                             <constraint firstItem="FzW-1Y-iYx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="383" id="ePg-vT-StQ"/>
                             <constraint firstItem="4tm-c3-3ba" firstAttribute="trailing" secondItem="SLc-CC-lhD" secondAttribute="trailing" id="iLI-bm-BF1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SLc-CC-lhD" secondAttribute="trailing" constant="85" id="nbl-lT-I0B"/>
-                            <constraint firstItem="FzW-1Y-iYx" firstAttribute="top" secondItem="WYG-LB-vfs" secondAttribute="bottom" constant="19" id="oLu-Vu-56O"/>
-                            <constraint firstItem="WYG-LB-vfs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="314" id="qSQ-aS-7td"/>
+                            <constraint firstItem="FzW-1Y-iYx" firstAttribute="top" secondItem="WYG-LB-vfs" secondAttribute="bottom" constant="131" id="oLu-Vu-56O"/>
+                            <constraint firstItem="WYG-LB-vfs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="202" id="qSQ-aS-7td"/>
                             <constraint firstItem="006-ea-K0Z" firstAttribute="leading" secondItem="4tm-c3-3ba" secondAttribute="leading" id="vfh-1U-Fvj"/>
+                            <constraint firstItem="FzW-1Y-iYx" firstAttribute="top" secondItem="7Hp-2q-4jD" secondAttribute="bottom" constant="41" id="xr8-f0-hgZ"/>
+                            <constraint firstItem="7Hp-2q-4jD" firstAttribute="trailing" secondItem="WYG-LB-vfs" secondAttribute="trailing" id="yTD-W8-k03"/>
                             <constraint firstItem="4tm-c3-3ba" firstAttribute="leading" secondItem="SLc-CC-lhD" secondAttribute="leading" id="zgx-Wg-hNo"/>
                         </constraints>
                     </view>
@@ -108,6 +124,7 @@
                         <outlet property="buttonPosition2" destination="Yhc-py-NWh" id="9Ly-rp-3nx"/>
                         <outlet property="buttonWidth" destination="u0d-W1-kjd" id="Dk3-lr-8AD"/>
                         <outlet property="openViewController" destination="FzW-1Y-iYx" id="8pQ-5V-sd3"/>
+                        <outlet property="playerButton" destination="7Hp-2q-4jD" id="bts-9z-EWP"/>
                         <outlet property="toDoList" destination="WYG-LB-vfs" id="hQD-k3-faG"/>
                         <segue destination="hMy-cR-wev" kind="presentation" identifier="SecondViewSegue" modalPresentationStyle="overCurrentContext" id="Ozi-yH-7In"/>
                     </connections>
@@ -169,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwH-II-D7W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="395.6521739130435" y="756.69642857142856"/>
+            <point key="canvasLocation" x="400" y="798"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="gr2-yg-aVm">
@@ -234,14 +251,75 @@
             </objects>
             <point key="canvasLocation" x="815.94202898550736" y="93.75"/>
         </scene>
+        <!--Player-->
+        <scene sceneID="2oh-XQ-06v">
+            <objects>
+                <viewController id="Lkc-r3-jIN" customClass="Player" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ew-Fh-ODB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8l-NF-DEO">
+                                <rect key="frame" x="20" y="29" width="64" height="45"/>
+                                <color key="backgroundColor" red="0.2322575036" green="0.47325122749999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="Lkc-r3-jIN" eventType="touchUpInside" id="3Sx-UF-XW2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmZ-0D-PJh">
+                                <rect key="frame" x="84" y="552" width="90" height="48"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="sVb-Gj-pBH"/>
+                                </constraints>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="1" green="0.28383586512009606" blue="0.88970173471419822" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDW-BA-eRR">
+                                <rect key="frame" x="256" y="552" width="99" height="48"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.66295147183943537" green="0.6736871612309554" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="frh-ea-Tb7"/>
+                        <color key="backgroundColor" red="0.64721262936640267" green="0.41590008585813742" blue="0.15420073240356963" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="A8l-NF-DEO" firstAttribute="top" secondItem="5ew-Fh-ODB" secondAttribute="topMargin" constant="-15" id="0WG-bn-Db3"/>
+                            <constraint firstItem="FDW-BA-eRR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xmZ-0D-PJh" secondAttribute="trailing" constant="8" symbolic="YES" id="4lQ-jO-zZr"/>
+                            <constraint firstItem="xmZ-0D-PJh" firstAttribute="baseline" secondItem="FDW-BA-eRR" secondAttribute="baseline" id="4x8-CW-9gs"/>
+                            <constraint firstItem="xmZ-0D-PJh" firstAttribute="top" secondItem="frh-ea-Tb7" secondAttribute="top" constant="510" id="HIH-om-3LA"/>
+                            <constraint firstItem="xmZ-0D-PJh" firstAttribute="leading" secondItem="frh-ea-Tb7" secondAttribute="leading" constant="84" id="ZTD-4H-lAf"/>
+                            <constraint firstItem="frh-ea-Tb7" firstAttribute="trailing" secondItem="A8l-NF-DEO" secondAttribute="trailing" constant="330" id="dCF-Rs-YsB"/>
+                            <constraint firstItem="frh-ea-Tb7" firstAttribute="bottom" secondItem="A8l-NF-DEO" secondAttribute="bottom" constant="788" id="dp8-ws-tha"/>
+                            <constraint firstItem="A8l-NF-DEO" firstAttribute="leading" secondItem="5ew-Fh-ODB" secondAttribute="leadingMargin" id="fNu-sU-hxo"/>
+                            <constraint firstItem="frh-ea-Tb7" firstAttribute="bottom" secondItem="xmZ-0D-PJh" secondAttribute="bottom" constant="262" id="gJV-dr-m5b"/>
+                            <constraint firstItem="frh-ea-Tb7" firstAttribute="trailing" secondItem="FDW-BA-eRR" secondAttribute="trailing" constant="76" id="taK-At-unM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7O-KT-uGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-494.20289855072468" y="797.54464285714278"/>
+        </scene>
     </scenes>
     <color key="tintColor" systemColor="systemRedColor"/>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
