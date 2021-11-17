@@ -277,6 +277,9 @@
                                 <state key="normal" title="Play">
                                     <color key="titleColor" red="1" green="0.28383586512009606" blue="0.88970173471419822" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="Lkc-r3-jIN" eventType="touchUpInside" id="Lok-ap-OWq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDW-BA-eRR">
                                 <rect key="frame" x="255" y="552" width="100" height="48"/>
@@ -284,7 +287,14 @@
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" red="0.66295147183943537" green="0.6736871612309554" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="Lkc-r3-jIN" eventType="touchUpInside" id="7mO-xT-fVJ"/>
+                                </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nV2-CW-bPh">
+                                <rect key="frame" x="82" y="434" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="frh-ea-Tb7"/>
                         <color key="backgroundColor" red="0.64721262936640267" green="0.41590008585813742" blue="0.15420073240356963" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -302,6 +312,9 @@
                             <constraint firstItem="FDW-BA-eRR" firstAttribute="leading" secondItem="xmZ-0D-PJh" secondAttribute="trailing" constant="82" id="zm5-cD-pX6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="nV2-CW-bPh" id="e74-fb-mxA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7O-KT-uGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
