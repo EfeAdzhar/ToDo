@@ -23,7 +23,7 @@ class Player: UIViewController {
 //MARK: Creating Bundle and Duration
         
         do {
-            if let audioPath = Bundle.main.path(forResource: "Михаил Круг - Владимирский Центра", ofType: "mp3") {
+            if let audioPath = Bundle.main.path(forResource: "Михаил Круг - Владимирский Централ", ofType: "mp3") {
                try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
                 self.slider.maximumValue = Float(player.duration)
             }
