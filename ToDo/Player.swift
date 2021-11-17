@@ -8,8 +8,9 @@ import AVFoundation
 class Player: UIViewController {
 //MARK:Initialization
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var volumeSlider: UISlider!
     
-//MARK: Variables
+    //MARK: Variables
     var player = AVAudioPlayer()
     
 //MARK: ViewDidLoad
@@ -62,5 +63,9 @@ class Player: UIViewController {
     @IBAction func pauseButtonPressed(_ sender: Any) {
         self.player.pause()
     }
+//MARK: Volume Slider
     
+    @IBAction func volumeSlider(_ sender: Any) {
+        self.player.volume = self.volumeSlider.value
+    }
 }

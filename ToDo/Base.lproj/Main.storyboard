@@ -268,11 +268,11 @@
                                     <action selector="backButtonPressed:" destination="Lkc-r3-jIN" eventType="touchUpInside" id="3Sx-UF-XW2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmZ-0D-PJh">
-                                <rect key="frame" x="84" y="552" width="89" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmZ-0D-PJh">
+                                <rect key="frame" x="72" y="543" width="101" height="48"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="sVb-Gj-pBH"/>
+                                    <constraint firstAttribute="width" constant="101" id="5tP-KN-HAD"/>
                                 </constraints>
                                 <state key="normal" title="Play">
                                     <color key="titleColor" red="1" green="0.28383586512009606" blue="0.88970173471419822" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -281,9 +281,23 @@
                                     <action selector="playButtonPressed:" destination="Lkc-r3-jIN" eventType="touchUpInside" id="Lok-ap-OWq"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nV2-CW-bPh">
+                                <rect key="frame" x="70" y="495" width="275" height="30"/>
+                                <color key="tintColor" red="0.18904361859999999" green="0.18129724059999999" blue="0.78370064500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="     Volume" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zS3-U0-RNx">
+                                <rect key="frame" x="159" y="599" width="96" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.56995724860467911" blue="0.80434922061976111" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDW-BA-eRR">
-                                <rect key="frame" x="255" y="552" width="100" height="48"/>
+                                <rect key="frame" x="242" y="543" width="100" height="48"/>
                                 <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Cpk-yG-bzE"/>
+                                    <constraint firstAttribute="height" constant="48" id="qIt-rX-hZ2"/>
+                                </constraints>
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" red="0.66295147183943537" green="0.6736871612309554" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -291,29 +305,48 @@
                                     <action selector="pauseButtonPressed:" destination="Lkc-r3-jIN" eventType="touchUpInside" id="7mO-xT-fVJ"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nV2-CW-bPh">
-                                <rect key="frame" x="82" y="434" width="275" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Михаил Круг - Владимирский Централ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iGl-IH-isP">
+                                <rect key="frame" x="68" y="452" width="275" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18904361859999999" green="0.18129724059999999" blue="0.78370064500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jii-iJ-fPM">
+                                <rect key="frame" x="70" y="641" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.46913618148160841" blue="0.90760437599004495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="volumeSlider:" destination="Lkc-r3-jIN" eventType="valueChanged" id="kkw-KI-a2k"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="frh-ea-Tb7"/>
                         <color key="backgroundColor" red="0.64721262936640267" green="0.41590008585813742" blue="0.15420073240356963" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="A8l-NF-DEO" firstAttribute="top" secondItem="5ew-Fh-ODB" secondAttribute="topMargin" constant="-15" id="0WG-bn-Db3"/>
-                            <constraint firstItem="FDW-BA-eRR" firstAttribute="top" secondItem="frh-ea-Tb7" secondAttribute="top" constant="508" id="2Tb-3d-hza"/>
-                            <constraint firstItem="FDW-BA-eRR" firstAttribute="top" secondItem="xmZ-0D-PJh" secondAttribute="top" id="ImF-TD-vgg"/>
-                            <constraint firstItem="FDW-BA-eRR" firstAttribute="firstBaseline" secondItem="xmZ-0D-PJh" secondAttribute="baseline" id="Mo8-0N-bHS"/>
-                            <constraint firstItem="frh-ea-Tb7" firstAttribute="trailing" secondItem="FDW-BA-eRR" secondAttribute="trailing" constant="59" id="U9q-di-Wv1"/>
-                            <constraint firstItem="xmZ-0D-PJh" firstAttribute="leading" secondItem="frh-ea-Tb7" secondAttribute="leading" constant="84" id="ZTD-4H-lAf"/>
+                            <constraint firstItem="FDW-BA-eRR" firstAttribute="trailing" secondItem="nV2-CW-bPh" secondAttribute="trailing" id="8aC-gn-0u3"/>
+                            <constraint firstItem="xmZ-0D-PJh" firstAttribute="leading" secondItem="frh-ea-Tb7" secondAttribute="leading" constant="72" id="9NG-gX-jv4"/>
+                            <constraint firstItem="xmZ-0D-PJh" firstAttribute="firstBaseline" secondItem="FDW-BA-eRR" secondAttribute="baseline" id="LKW-qd-dnX"/>
+                            <constraint firstItem="FDW-BA-eRR" firstAttribute="trailing" secondItem="nV2-CW-bPh" secondAttribute="trailing" id="P3k-je-Ekd"/>
+                            <constraint firstItem="xmZ-0D-PJh" firstAttribute="leading" secondItem="nV2-CW-bPh" secondAttribute="leading" id="Xpi-ef-RHu"/>
+                            <constraint firstItem="zS3-U0-RNx" firstAttribute="centerX" secondItem="5ew-Fh-ODB" secondAttribute="centerX" id="YAG-sT-VZi"/>
+                            <constraint firstItem="zS3-U0-RNx" firstAttribute="centerX" secondItem="nV2-CW-bPh" secondAttribute="centerX" id="Zvy-vx-9A3"/>
                             <constraint firstItem="frh-ea-Tb7" firstAttribute="trailing" secondItem="A8l-NF-DEO" secondAttribute="trailing" constant="330" id="dCF-Rs-YsB"/>
                             <constraint firstItem="frh-ea-Tb7" firstAttribute="bottom" secondItem="A8l-NF-DEO" secondAttribute="bottom" constant="788" id="dp8-ws-tha"/>
                             <constraint firstItem="A8l-NF-DEO" firstAttribute="leading" secondItem="5ew-Fh-ODB" secondAttribute="leadingMargin" id="fNu-sU-hxo"/>
-                            <constraint firstItem="frh-ea-Tb7" firstAttribute="bottom" secondItem="xmZ-0D-PJh" secondAttribute="bottom" constant="262" id="gJV-dr-m5b"/>
-                            <constraint firstItem="FDW-BA-eRR" firstAttribute="leading" secondItem="xmZ-0D-PJh" secondAttribute="trailing" constant="82" id="zm5-cD-pX6"/>
+                            <constraint firstItem="zS3-U0-RNx" firstAttribute="leading" secondItem="frh-ea-Tb7" secondAttribute="leading" constant="159" id="fQQ-Et-Txr"/>
+                            <constraint firstItem="xmZ-0D-PJh" firstAttribute="top" secondItem="FDW-BA-eRR" secondAttribute="top" id="h00-oW-CfT"/>
+                            <constraint firstItem="zS3-U0-RNx" firstAttribute="top" secondItem="FDW-BA-eRR" secondAttribute="bottom" constant="8" symbolic="YES" id="ulo-ax-OM8"/>
+                            <constraint firstAttribute="bottom" secondItem="FDW-BA-eRR" secondAttribute="bottom" constant="305" id="v2I-JB-7Vk"/>
+                            <constraint firstItem="FDW-BA-eRR" firstAttribute="leading" secondItem="xmZ-0D-PJh" secondAttribute="trailing" constant="70" id="z9D-Kf-iff"/>
+                            <constraint firstItem="FDW-BA-eRR" firstAttribute="top" secondItem="nV2-CW-bPh" secondAttribute="bottom" constant="19" id="zBN-oj-DmR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="slider" destination="nV2-CW-bPh" id="e74-fb-mxA"/>
+                        <outlet property="volumeSlider" destination="Jii-iJ-fPM" id="J6X-Ri-90I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7O-KT-uGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
