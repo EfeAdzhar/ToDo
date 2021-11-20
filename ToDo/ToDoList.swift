@@ -8,11 +8,25 @@ class ToDoList: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
+//    var toDO = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
-    
+//    func  numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        return 1
+//    }
+//
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//            return toDO.count
+//        }
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as UITableViewCell
+//            cell.textLabel!.text = toDO[indexPath.row]
+//            return cell
+//        }
+//
 //MARK: Showing when View will Appear
     override func viewDidAppear(_ animated: Bool) {
         welcomeAlert(title: "Welcome to ToDoList", message: "It's still in development", style: .alert)
@@ -41,8 +55,7 @@ class ToDoList: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertButton1 = UIAlertAction(title: "Cancel", style: .cancel, handler: .none)
         let alertButton2 = UIAlertAction(title: "Add", style: .default) { UITableView in
-            
-        }
+            }
         alert.addTextField(configurationHandler: { textField in textField.placeholder = "New Task"})
         alert.addAction(alertButton1)
         alert.addAction(alertButton2)

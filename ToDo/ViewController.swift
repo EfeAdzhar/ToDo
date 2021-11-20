@@ -19,22 +19,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonPosition: NSLayoutConstraint!
     @IBOutlet weak var buttonPosition2: NSLayoutConstraint!
     @IBOutlet weak var playerButton: UIButton!
-    //MARK: Variables
+//MARK: Variables
     @IBOutlet weak var toDoList: UIButton!
     var originalColor : UIColor?
     var originalPosition : CGPoint?
     
-//MARK: Open View Controller -> Second View Controller
+//MARK: View Controller -> Second View Controller
     @IBAction func buttonPressed(_ sender: Any) {
         print("The Button Has Been Pressed")
         self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
     }
     
-//MARK: Open View Controller -> Third View Controller
+//MARK: View Controller -> Third View Controller
     @IBAction func ToDoButtonPressed(_ sender: Any) {
         print("The To Do List Button Pressed")
         self.performSegue(withIdentifier: "toDoListSegue", sender: self)
     }
+    
+//MARK: View Controller -> Player
+    @IBAction func playerButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "PlayerSegue", sender: self)
+        }
+        
+//MARK: View Controller -> Little Shop
+    @IBAction func buttonShopPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "LittleShopSegue", sender: self)
+        }
     
 //MARK: Changing Button Color
     @IBAction func buttonTwoPressed(_ sender: UIButton) {
@@ -68,11 +78,6 @@ class ViewController: UIViewController {
                 self.view.layoutIfNeeded()
             })
         }
-     }
-    
-//MARK: Player Button Pressed
-    @IBAction func playerButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "PlayerSegue", sender: self)
     }
 }
 

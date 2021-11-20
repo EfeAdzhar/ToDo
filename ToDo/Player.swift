@@ -17,12 +17,11 @@ class Player: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.slider.minimumValue = 0.0
-        self.slider.maximumValue = 100.0
+        self.slider.maximumValue = 200.0
 //MARK: Targeting
         
         slider.addTarget(self, action: #selector(sliderDuration), for: .valueChanged)
 //MARK: Creating Bundle and Duration
-        
         do {
             if let audioPath = Bundle.main.path(forResource: "Михаил Круг - Владимирский Централ", ofType: "mp3") {
                try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
