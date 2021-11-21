@@ -1,9 +1,6 @@
-//
 //  LittleShop.swift
 //  ToDo
-//
 //  Created by Efe on 20.11.2021.
-//
 
 import UIKit
 
@@ -13,12 +10,11 @@ class LittleShop: UIViewController {
     var image = UIImageView()
     var buttonShare = UIButton();
     var activityViewController : UIActivityViewController? = nil
+    var selectArray = ["one", "two", "three"]
     var imageArray = [UIImage(named: "3b8ad2c7b1be2caf24321c852103598a.jpg"),
                       UIImage(named: "5e921526faf7fcd6bd2cb60260a9affb.jpg"),
-                      UIImage(named: "243-2437335_sunset-horizon-scenery-landscape-art-4k-painting.jpg")]
-    
-    var selectArray = ["one", "two", "three"]
-    
+                      UIImage(named: "2593251.jpg")]
+    //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         //creating Segment
@@ -30,7 +26,7 @@ class LittleShop: UIViewController {
         //Targer
         self.segment.addTarget(self, action: #selector(selectedValue(sender:)), for: .valueChanged)
     }
-    
+    //MARK: Changing Images
     @objc func selectedValue(sender : UISegmentedControl) {
         if sender == self.segment {
             let segmentIndex = sender.selectedSegmentIndex
@@ -56,7 +52,12 @@ class LittleShop: UIViewController {
         self.buttonShare.frame = CGRect(x: 110, y: 680, width: 200, height: 44)
         self.buttonShare.setTitle("Share", for: .normal)
         self.buttonShare.backgroundColor = .blue
-        //        self.buttonShare.addTarget(self, action: #selector(<#T##@objc method#>), for: .touchUpInside)
+        self.buttonShare.addTarget(self, action: #selector(shareParam(param:)), for: .touchUpInside)
         self.view.addSubview(self.buttonShare)
+    }
+    //MARK: Choosing Image to Send
+    @objc func shareParam(param : Any) {
+        self.activityViewController = UIActivityViewController(activityItems: [self.image.image!], applicationActivities: nil)
+        self.present(activityViewController!, animated: true, completion: .none)
     }
 }
