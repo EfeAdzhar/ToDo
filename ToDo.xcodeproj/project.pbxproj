@@ -10,6 +10,9 @@
 		B42C0180274903E00020D16B /* LittleShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C017F274903E00020D16B /* LittleShop.swift */; };
 		B44CE8C52745147600709124 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44CE8C42745147600709124 /* Player.swift */; };
 		B44CE8C72745227D00709124 /* Михаил Круг - Владимирский Централ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B44CE8C62745227D00709124 /* Михаил Круг - Владимирский Централ.mp3 */; };
+		B463A8F3274A601800420BF6 /* 5e921526faf7fcd6bd2cb60260a9affb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B463A8F1274A601800420BF6 /* 5e921526faf7fcd6bd2cb60260a9affb.jpg */; };
+		B463A8F4274A601800420BF6 /* 3b8ad2c7b1be2caf24321c852103598a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B463A8F2274A601800420BF6 /* 3b8ad2c7b1be2caf24321c852103598a.jpg */; };
+		B463A8F6274A602600420BF6 /* 243-2437335_sunset-horizon-scenery-landscape-art-4k-painting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B463A8F5274A602600420BF6 /* 243-2437335_sunset-horizon-scenery-landscape-art-4k-painting.jpg */; };
 		B467463B2732C4EF008E8668 /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B467463A2732C4EF008E8668 /* ToDoList.swift */; };
 		B46C5B61270314A8002E1CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48515E426FF938500F8CB41 /* ViewController.swift */; };
 		B46C5B6327032995002E1CA9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C5B6227032995002E1CA9 /* SecondViewController.swift */; };
@@ -24,6 +27,9 @@
 		B42C017F274903E00020D16B /* LittleShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleShop.swift; sourceTree = "<group>"; };
 		B44CE8C42745147600709124 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B44CE8C62745227D00709124 /* Михаил Круг - Владимирский Централ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Михаил Круг - Владимирский Централ.mp3"; path = "../../../Downloads/Михаил Круг - Владимирский Централ.mp3"; sourceTree = "<group>"; };
+		B463A8F1274A601800420BF6 /* 5e921526faf7fcd6bd2cb60260a9affb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5e921526faf7fcd6bd2cb60260a9affb.jpg; sourceTree = "<group>"; };
+		B463A8F2274A601800420BF6 /* 3b8ad2c7b1be2caf24321c852103598a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3b8ad2c7b1be2caf24321c852103598a.jpg; sourceTree = "<group>"; };
+		B463A8F5274A602600420BF6 /* 243-2437335_sunset-horizon-scenery-landscape-art-4k-painting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "243-2437335_sunset-horizon-scenery-landscape-art-4k-painting.jpg"; sourceTree = "<group>"; };
 		B467463A2732C4EF008E8668 /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		B46C5B6227032995002E1CA9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B48515DD26FF938500F8CB41 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +81,9 @@
 				B42C017F274903E00020D16B /* LittleShop.swift */,
 				B44CE8C42745147600709124 /* Player.swift */,
 				B44CE8C62745227D00709124 /* Михаил Круг - Владимирский Централ.mp3 */,
+				B463A8F2274A601800420BF6 /* 3b8ad2c7b1be2caf24321c852103598a.jpg */,
+				B463A8F1274A601800420BF6 /* 5e921526faf7fcd6bd2cb60260a9affb.jpg */,
+				B463A8F5274A602600420BF6 /* 243-2437335_sunset-horizon-scenery-landscape-art-4k-painting.jpg */,
 				B48515E926FF938600F8CB41 /* Assets.xcassets */,
 				B48515EB26FF938600F8CB41 /* LaunchScreen.storyboard */,
 				B48515EE26FF938600F8CB41 /* Info.plist */,
@@ -139,8 +148,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B463A8F4274A601800420BF6 /* 3b8ad2c7b1be2caf24321c852103598a.jpg in Resources */,
 				B48515ED26FF938600F8CB41 /* LaunchScreen.storyboard in Resources */,
 				B44CE8C72745227D00709124 /* Михаил Круг - Владимирский Централ.mp3 in Resources */,
+				B463A8F6274A602600420BF6 /* 243-2437335_sunset-horizon-scenery-landscape-art-4k-painting.jpg in Resources */,
+				B463A8F3274A601800420BF6 /* 5e921526faf7fcd6bd2cb60260a9affb.jpg in Resources */,
 				B48515EA26FF938600F8CB41 /* Assets.xcassets in Resources */,
 				B48515E826FF938500F8CB41 /* Main.storyboard in Resources */,
 			);

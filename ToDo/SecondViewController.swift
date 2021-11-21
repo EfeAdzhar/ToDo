@@ -4,18 +4,18 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-//MARK: METHOD
+    //MARK: METHOD
     @IBOutlet weak var mySwitch: UISwitch!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var errorButton: UIButton!
     var backgroundColor : UIColor!
     var interestingButton = UIButton()
     var picker = UIPickerView()
-//MARK: UIViewController Lifecycle
+    //MARK: UIViewController Lifecycle
     override class func awakeFromNib() {
         print("awakeFromNib")
     }
-//MARK: ViewDidLoad
+    //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
@@ -43,7 +43,7 @@ class SecondViewController: UIViewController {
         picker.dataSource = self
         picker.delegate = self
     }
-//MARK: UIViewController Lifecycle
+    //MARK: UIViewController Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         print("viewWillAppear")
     }
@@ -65,30 +65,30 @@ class SecondViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         print("viewDidDisappear")
     }
-
-//MARK: Back Button Pressed
+    
+    //MARK: Back Button Pressed
     @IBAction func backButtonPressed(_ sender: UIButton) {
         print("i'm back")
-       dismiss(animated: true)
+        dismiss(animated: true)
     }
-//MARK: Error Button Pressed
+    //MARK: Error Button Pressed
     @IBAction func errorButtonPressed(_ sender: UIButton) {
         errorButtonOne(title: "Suprice, it's an error :)", message: "What's your problem?", style: .alert)
-}
-//MARK: Error Functions
+    }
+    //MARK: Error Functions
     func errorButtonOne(title : String, message : String, style : UIAlertController.Style) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let action1 = UIAlertAction(title: "my bad", style: .default)
-//If person presses "not ok", he will go back to mainViewController
+        //If person presses "not ok", he will go back to mainViewController
         let action2 = UIAlertAction(title: "not ok", style: .cancel) { action2 in
             self.dismiss(animated: true)
         }
-//Adding some stuff
+        //Adding some stuff
         alertController.addAction(action1)
         alertController.addAction(action2)
         self.present(alertController, animated: true, completion: nil)
     }
-//MARK: Deleting or Returning Error Button BackGround Color
+    //MARK: Deleting or Returning Error Button BackGround Color
     @IBAction func mySwitchAction(_ sender: UISwitch) {
         if !sender.isOn {
             errorButton.backgroundColor = nil

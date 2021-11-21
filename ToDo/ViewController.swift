@@ -4,7 +4,7 @@
 import UIKit
 //MARK: Code that works
 class ViewController: UIViewController {
-//MARK: Saving origins
+    //MARK: Saving origins
     override func viewDidLoad() {
         super.viewDidLoad()
         originalColor = openViewController.backgroundColor
@@ -12,45 +12,45 @@ class ViewController: UIViewController {
         print("ViewController")
     }
     
-//MARK: Initialization
+    //MARK: Initialization
     @IBOutlet weak var openViewController: UIButton!
     @IBOutlet weak var buttonHeight: NSLayoutConstraint!
     @IBOutlet weak var buttonWidth: NSLayoutConstraint!
     @IBOutlet weak var buttonPosition: NSLayoutConstraint!
     @IBOutlet weak var buttonPosition2: NSLayoutConstraint!
     @IBOutlet weak var playerButton: UIButton!
-//MARK: Variables
+    //MARK: Variables
     @IBOutlet weak var toDoList: UIButton!
     var originalColor : UIColor?
     var originalPosition : CGPoint?
     
-//MARK: View Controller -> Second View Controller
+    //MARK: View Controller -> Second View Controller
     @IBAction func buttonPressed(_ sender: Any) {
         print("The Button Has Been Pressed")
         self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
     }
     
-//MARK: View Controller -> Third View Controller
+    //MARK: View Controller -> Third View Controller
     @IBAction func ToDoButtonPressed(_ sender: Any) {
         print("The To Do List Button Pressed")
         self.performSegue(withIdentifier: "toDoListSegue", sender: self)
     }
     
-//MARK: View Controller -> Player
+    //MARK: View Controller -> Player
     @IBAction func playerButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "PlayerSegue", sender: self)
-        }
-        
-//MARK: View Controller -> Little Shop
+    }
+    
+    //MARK: View Controller -> Little Shop
     @IBAction func buttonShopPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "LittleShopSegue", sender: self)
-        }
+    }
     
-//MARK: Changing Button Color
+    //MARK: Changing Button Color
     @IBAction func buttonTwoPressed(_ sender: UIButton) {
         openViewController.backgroundColor = openViewController.backgroundColor == originalColor ? .red : originalColor
     }
-//MARK: Changing Button Size On Screen
+    //MARK: Changing Button Size On Screen
     @IBAction func buttonThreePressed(_ sender: UIButton) {
         if buttonHeight.constant == 75 && buttonWidth.constant == 244  {
             UIView.animate(withDuration: 0.35, animations: { () -> Void in self.buttonHeight.constant = 90
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         }
     }
     
-//MARK: Changing Button Position On Screen
+    //MARK: Changing Button Position On Screen
     @IBAction func buttonFourPressed(_ sender: UIButton) {
         if buttonPosition.constant == 383 && buttonPosition2.constant == 22.5 {
             UIView.animate(withDuration: 0.35, animations: { () -> Void in self.buttonPosition.constant = 250
@@ -92,13 +92,13 @@ class ViewController: UIViewController {
 //            })
 //         }
 
-   //  if openViewController.frame.origin == originalPosition {
-   //            openViewController.frame.origin = CGPoint(x : 10, y : 10)
-   //        }
-   //        else {
-   //            openViewController.frame.origin = originalPosition!
-   //        }
-   //}
+//  if openViewController.frame.origin == originalPosition {
+//            openViewController.frame.origin = CGPoint(x : 10, y : 10)
+//        }
+//        else {
+//            openViewController.frame.origin = originalPosition!
+//        }
+//}
 
 //let X_Position : CGFloat = 5.0
 //        let Y_Position : CGFloat = 5.0
@@ -110,13 +110,13 @@ class ViewController: UIViewController {
 //        } else {
 //            openViewController.backgroundColor = originalColor
 //          }
-        
+
 //        if counter != 0 {
 //            openViewController.backgroundColor = originalColor
 //        }
 //        counter += 1
 //
-        
+
 
 //if counter % 2 == 0 {
 //            openViewController.backgroundColor = UIColor.red
@@ -132,7 +132,7 @@ class ViewController: UIViewController {
 //        let secondViewController = storyboard?.instantiateViewController(withIdentifier: "secondViewController") as! SecondViewController
 //        present(secondViewController, animated: true)
 //    }
-    
+
 //    override func prepare(for segue: UIStoryboardSegue, sender : Any?) {
 //
 //        if segue.identifier == "SecondViewSegue" {

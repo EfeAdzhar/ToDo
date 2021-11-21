@@ -6,33 +6,33 @@ import UIKit
 import AVFoundation
 
 class Player: UIViewController {
-//MARK:Initialization
+    //MARK:Initialization
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var volumeSlider: UISlider!
     
     //MARK: Variables
     var player = AVAudioPlayer()
     
-//MARK: ViewDidLoad
+    //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         self.slider.minimumValue = 0.0
         self.slider.maximumValue = 200.0
-//MARK: Targeting
+        //MARK: Targeting
         
         slider.addTarget(self, action: #selector(sliderDuration), for: .valueChanged)
-//MARK: Creating Bundle and Duration
+        //MARK: Creating Bundle and Duration
         do {
             if let audioPath = Bundle.main.path(forResource: "Михаил Круг - Владимирский Централ", ofType: "mp3") {
-               try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+                try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
                 self.slider.maximumValue = Float(player.duration)
             }
-             }  catch {
-                print("Error")
+        }  catch {
+            print("Error")
         }
     }
     
-//MARK: Alert after View did Load
+    //MARK: Alert after View did Load
     override func viewDidAppear(_ animated: Bool) {
         alertAfterViewDidLoad(title: "Welcome To Player", message: "It's a Test", preferredStyle: .alert)
     }
@@ -46,23 +46,23 @@ class Player: UIViewController {
         dismiss(animated: true, completion: .none)
     }
     
-//MARK: Duration
+    //MARK: Duration
     @objc func sliderDuration(sender : UISlider) {
         if sender == slider {
             self.player.currentTime = TimeInterval(sender.value)
         }
     }
     
-//MARK: Play Button Pressed
+    //MARK: Play Button Pressed
     @IBAction func playButtonPressed(_ sender: Any) {
         self.player.play()
     }
     
-//MARK: Pause Button Pressed
+    //MARK: Pause Button Pressed
     @IBAction func pauseButtonPressed(_ sender: Any) {
         self.player.pause()
     }
-//MARK: Volume Slider
+    //MARK: Volume Slider
     
     @IBAction func volumeSlider(_ sender: Any) {
         self.player.volume = self.volumeSlider.value
