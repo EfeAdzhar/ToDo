@@ -152,11 +152,11 @@
             <objects>
                 <viewController storyboardIdentifier="toDoList" id="vcT-Rz-Vbp" customClass="ToDoList" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Se0-Cc-NUi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GZD-ol-0kc">
-                                <rect key="frame" x="0.0" y="144" width="414" height="683"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="P9O-OU-UVL">
@@ -168,9 +168,13 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vcT-Rz-Vbp" id="Xgw-Pq-iEn"/>
+                                    <outlet property="delegate" destination="vcT-Rz-Vbp" id="wK2-7x-neS"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbp-n9-5eu">
-                                <rect key="frame" x="14" y="74" width="58" height="30"/>
+                                <rect key="frame" x="14" y="30" width="58" height="30"/>
                                 <state key="normal" title="Go Back">
                                     <color key="titleColor" red="1" green="0.32983118239404918" blue="0.28695648114709782" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -179,7 +183,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpL-bz-4mh">
-                                <rect key="frame" x="359" y="68" width="35" height="40"/>
+                                <rect key="frame" x="359" y="24" width="35" height="40"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
@@ -205,7 +209,7 @@
                     <connections>
                         <outlet property="addButton" destination="XpL-bz-4mh" id="Jcf-kl-oql"/>
                         <outlet property="backButton" destination="Hbp-n9-5eu" id="s3p-dW-vez"/>
-                        <outlet property="tableView" destination="GZD-ol-0kc" id="pwc-AK-eGp"/>
+                        <outlet property="tableView" destination="GZD-ol-0kc" id="TJ2-pg-q0u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwH-II-D7W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -295,11 +299,11 @@
             <objects>
                 <viewController id="Lkc-r3-jIN" customClass="Player" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ew-Fh-ODB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8l-NF-DEO">
-                                <rect key="frame" x="20" y="29" width="64" height="45"/>
+                                <rect key="frame" x="20" y="-15" width="64" height="35"/>
                                 <color key="backgroundColor" red="0.2322575036" green="0.47325122749999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Back"/>
