@@ -75,6 +75,11 @@ class SecondViewController: UIViewController {
     @IBAction func errorButtonPressed(_ sender: UIButton) {
         errorButtonOne(title: "Suprice, it's an error :)", message: "What's your problem?", style: .alert)
     }
+    //MARK: Networking Button Pressed
+    
+    @IBAction func networkingButtonPressed(_ sender: UIButton) {
+        self.present(NetworkingViewController(), animated: true, completion: .none)
+    }
     //MARK: Error Functions
     func errorButtonOne(title : String, message : String, style : UIAlertController.Style) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)

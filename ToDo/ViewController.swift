@@ -6,6 +6,7 @@ import UIKit
 class ViewController: UIViewController {
     //MARK: Saving origins
     override func viewDidLoad() {
+        self.title = "Main Menu"
         super.viewDidLoad()
         originalColor = openViewController.backgroundColor
         originalPosition = openViewController.frame.origin

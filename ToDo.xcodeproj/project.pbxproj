@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40B948227726D2D008683E2 /* NetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40B948127726D2D008683E2 /* NetworkingViewController.swift */; };
 		B42C0180274903E00020D16B /* LittleShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C017F274903E00020D16B /* LittleShop.swift */; };
 		B44CE8C52745147600709124 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44CE8C42745147600709124 /* Player.swift */; };
 		B44CE8C72745227D00709124 /* Михаил Круг - Владимирский Централ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B44CE8C62745227D00709124 /* Михаил Круг - Владимирский Централ.mp3 */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B40B948127726D2D008683E2 /* NetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewController.swift; sourceTree = "<group>"; };
 		B42C017F274903E00020D16B /* LittleShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleShop.swift; sourceTree = "<group>"; };
 		B44CE8C42745147600709124 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B44CE8C62745227D00709124 /* Михаил Круг - Владимирский Централ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Михаил Круг - Владимирский Централ.mp3"; path = "../../../Downloads/Михаил Круг - Владимирский Централ.mp3"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				B467463A2732C4EF008E8668 /* ToDoList.swift */,
 				B46C5B6227032995002E1CA9 /* SecondViewController.swift */,
 				B48515E626FF938500F8CB41 /* Main.storyboard */,
+				B40B948127726D2D008683E2 /* NetworkingViewController.swift */,
 				B42C017F274903E00020D16B /* LittleShop.swift */,
 				B44CE8C42745147600709124 /* Player.swift */,
 				B44CE8C62745227D00709124 /* Михаил Круг - Владимирский Централ.mp3 */,
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40B948227726D2D008683E2 /* NetworkingViewController.swift in Sources */,
 				B42C0180274903E00020D16B /* LittleShop.swift in Sources */,
 				B46C5B61270314A8002E1CA9 /* ViewController.swift in Sources */,
 				B48515E126FF938500F8CB41 /* AppDelegate.swift in Sources */,

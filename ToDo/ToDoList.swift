@@ -12,6 +12,7 @@ class ToDoList: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "To Do List"
     }
     
     //MARK: Add Items
