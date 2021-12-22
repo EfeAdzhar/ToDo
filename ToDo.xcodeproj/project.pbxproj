@@ -22,6 +22,7 @@
 		B48515E826FF938500F8CB41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48515E626FF938500F8CB41 /* Main.storyboard */; };
 		B48515EA26FF938600F8CB41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48515E926FF938600F8CB41 /* Assets.xcassets */; };
 		B48515ED26FF938600F8CB41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48515EB26FF938600F8CB41 /* LaunchScreen.storyboard */; };
+		B4F242E327738B6100564BAB /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F242E227738B6100564BAB /* JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B48515E926FF938600F8CB41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B48515EC26FF938600F8CB41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B48515EE26FF938600F8CB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F242E227738B6100564BAB /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				B46C5B6227032995002E1CA9 /* SecondViewController.swift */,
 				B48515E626FF938500F8CB41 /* Main.storyboard */,
 				B40B948127726D2D008683E2 /* NetworkingViewController.swift */,
+				B4F242E227738B6100564BAB /* JSON.swift */,
 				B42C017F274903E00020D16B /* LittleShop.swift */,
 				B44CE8C42745147600709124 /* Player.swift */,
 				B44CE8C62745227D00709124 /* Михаил Круг - Владимирский Централ.mp3 */,
@@ -171,6 +174,7 @@
 				B40B948227726D2D008683E2 /* NetworkingViewController.swift in Sources */,
 				B42C0180274903E00020D16B /* LittleShop.swift in Sources */,
 				B46C5B61270314A8002E1CA9 /* ViewController.swift in Sources */,
+				B4F242E327738B6100564BAB /* JSON.swift in Sources */,
 				B48515E126FF938500F8CB41 /* AppDelegate.swift in Sources */,
 				B467463B2732C4EF008E8668 /* ToDoList.swift in Sources */,
 				B48515E326FF938500F8CB41 /* SceneDelegate.swift in Sources */,

@@ -5,13 +5,17 @@
 import UIKit
 
 class NetworkingViewController: UIViewController {
-
+    
     @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        setupSearchBar()
-        JSON()
+        let urlString = "https://jsonplaceholder.typicode.com/todos/"
+        request(urlString: urlString) { result, error in
+            result?.results.map({ (title) in
+                print(title.title)
+            })
+        }
     }
     
     private func setupTableView() {
@@ -20,26 +24,26 @@ class NetworkingViewController: UIViewController {
         myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
-    func JSON() {
-        let urlString = "https://jsonplaceholder.typicode.com/todos/"
+    func request(urlString : String, completion : @escaping (Result?, Error?) -> Void) {
         guard let url = URL(string: urlString) else {return}
         URLSession.shared.dataTask(with: url) { data, responds, error in
-            if let error = error {
-                print(error)
-                return
+            DispatchQueue.main.async {
+                if let error = error {
+                    print(error)
+                    completion(nil, error)
+                    return
+                }
+                guard let data = data else {return}
+                do {
+                 let result = try JSONDecoder().decode(Result.self, from: data)
+                    completion(result, nil)
+                } catch let jsonError {
+                    print("Failed to Decode", jsonError)
+                    completion(nil, jsonError)
+                }
             }
-            guard let data = data else {return}
-            let jsonString = String(data: data, encoding: .utf8)
-            print(jsonString ?? "0")
-        }
+        }.resume()
     }
-}
-
-struct JSON: Decodable {
-    let userId : Int
-    let id : Int
-    let title : String
-    let completed : Bool
 }
 
 extension NetworkingViewController : UITableViewDelegate, UITableViewDataSource {
