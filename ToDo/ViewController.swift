@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
     }
     
-    //MARK: View Controller -> Third View Controller
+    //MARK: View Controller -> ToDoList
     @IBAction func ToDoButtonPressed(_ sender: Any) {
         print("The To Do List Button Pressed")
         self.performSegue(withIdentifier: "toDoListSegue", sender: self)

@@ -1,27 +1,25 @@
-//
 //  NetworkingViewController.swift
 //  ToDo
-//
 //  Created by Efe on 21.12.2021.
-//
 
 import UIKit
 
 class NetworkingViewController: UIViewController {
 
     @IBOutlet weak var myTableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupSearchBar()
         JSON()
     }
+    
     private func setupTableView() {
-        //myTableView.delegate = self
-        //Thread 1: Fatal error: Unexpectedly found nil while implicitly unwrapping an Optional value
+        myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
+    
     func JSON() {
         let urlString = "https://jsonplaceholder.typicode.com/todos/"
         guard let url = URL(string: urlString) else {return}
@@ -53,6 +51,7 @@ extension NetworkingViewController : UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "123"
+        cell.backgroundColor = .systemIndigo
         return cell
     }
 }
